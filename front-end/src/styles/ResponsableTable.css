@@ -1,0 +1,66 @@
+.table-container {
+  margin-top: 2rem;
+  overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es más ancha que el contenedor */
+  border-radius: 10px; /* Bordes redondeados para el contenedor de la tabla */
+  box-shadow: 0 0 10px #ff4500; /* Sombra exterior para dar un efecto elevado */
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar vertical */
+  height: 8px; /* Altura del scrollbar horizontal para mejor acceso en dispositivos táctiles */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #242424; /* Color de fondo para la pista del scrollbar */
+  border-radius: 10px; /* Bordes redondeados en la pista */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #ff4500; /* Neon Red-Orange para el scrollbar */
+  border-radius: 10px; /* Bordes redondeados para el scrollbar */
+  border: 2px solid #242424; /* Borde sólido para distinguir mejor el scrollbar del track */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #ff6347; /* Color más claro en hover para el scrollbar */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px; /* Bordes redondeados para la tabla */
+  overflow: hidden; /* Esconde el overflow para respetar los bordes redondeados */
+}
+
+table, th, td {
+  border: 1px solid #ff4500; /* Neon Red-Orange para los bordes */
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: center; /* Centrado del texto para mejorar la legibilidad */
+  border-bottom: none; /* Elimina el borde inferior para evitar doble borde con filas */
+}
+
+th {
+  background-color: #333; /* Color de fondo para los encabezados de la tabla */
+  color: #ff4500; /* Color del texto en los encabezados para mantener la estética neon */
+}
+
+tr:nth-child(even) {
+  background-color: #444; /* Color de fondo para las filas pares */
+}
+
+@media screen and (max-width: 600px) {
+  .table-container {
+    border-radius: 0; /* Bordes rectos para encajar mejor en pantallas pequeñas */
+  }
+
+  table, th, td {
+    padding: 0.25rem; /* Reducción del padding en dispositivos pequeños para ahorrar espacio */
+  }
+
+  .table-container::-webkit-scrollbar {
+    width: 4px; /* Reducción del ancho del scrollbar en dispositivos pequeños */
+  }
+}
